@@ -185,7 +185,7 @@ scripts/
   render.py                   HTML 包装、无头截图
   doctor.py                   环境与模板自检
 templates/
-  _文件格式说明.html            演示模板文件由哪几块组成（不是风格示例）
+  _file-format.html           演示模板文件由哪几块组成（不是风格示例）
 assets/
   titles.example.txt          标题清单格式示例
 docs/

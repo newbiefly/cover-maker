@@ -178,7 +178,7 @@ py -3 cover.py --list                      # 看现有模板
 py -3 doctor.py                            # 改完自检
 ```
 
-模板是普通 HTML/CSS，规范见 `references/template-spec.md`，`templates/_文件格式说明.html` 演示文件由哪几块组成。
+模板是普通 HTML/CSS，规范见 `references/template-spec.md`，`templates/_file-format.html` 演示文件由哪几块组成。
 
 ## 运行环境
 
