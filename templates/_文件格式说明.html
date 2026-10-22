@@ -1,0 +1,56 @@
+<!-- cover-template
+     name: 文件格式说明
+     size: 3:4
+     note: 讲文件怎么写的说明图，不是封面风格。别拿它当设计参考。
+-->
+<!--
+  ⚠ 这个文件刻意做得不像封面。
+
+  它只演示"一个模板文件由哪几块组成"。如果它长得像成品封面，
+  就会变成设计时的锚点，让所有方案都朝它靠。设计从结构想起，
+  不从这里改起。
+
+  一个模板 = 三块：
+
+    ① 元数据块   <!-- cover-template  name/size/note -->
+    ② 样式       <style> ... </style>
+    ③ 内容       HTML（#root 的子元素）
+
+  渲染时外层已注入：#root 有画布尺寸和 position:relative，
+  body 有中文字体链。所以子元素直接 absolute 定位即可。
+
+  可用材料（纯文本替换，用不到的不用管）：
+    {{title}} {{title_html}} {{head}} {{tail}}
+    {{key}} {{wrong}} {{num}} {{seq}} {{total}} {{query}}
+    {{hero_px}}  ← 建议字号，仅在标题是大块主文本时适用
+
+  完整规范: references/template-spec.md
+-->
+<style>
+  #root { background: #ECEFF3; }
+
+  .blk { position: absolute; left: 70px; right: 70px;
+         border: 4px dashed #9AA3AE; border-radius: 14px;
+         color: #5A636E; font-weight: 800;
+         display: flex; align-items: center; justify-content: center;
+         text-align: center; line-height: 1.5; }
+
+  .b1 { top: 90px;   height: 300px; font-size: 40px; background: #F7F9FB; }
+  .b2 { top: 430px;  height: 380px; font-size: 40px; background: #FDF6E8; }
+  .b3 { top: 850px;  height: 380px; font-size: 40px; background: #EFF7F1; }
+
+  .note { position: absolute; bottom: 90px; left: 70px; right: 70px;
+          text-align: center; font-size: 32px; color: #8A939E; font-weight: 700; }
+
+  /* 证明占位符能用：下面这行会被替换成真实标题 */
+  .proof { position: absolute; bottom: 160px; left: 70px; right: 70px;
+           text-align: center; font-size: 34px; color: #46505B; font-weight: 700; }
+  .o { color: #D2691E; }
+</style>
+
+<div class="blk b1">① 元数据块<br>name / size / note</div>
+<div class="blk b2">② &lt;style&gt;<br>画布 1080×1440<br>#root 已是定位容器</div>
+<div class="blk b3">③ HTML 内容<br>子元素 position:absolute</div>
+
+<div class="proof">占位符验证 → {{title_html}}</div>
+<div class="note">这是结构说明，不是封面风格</div>

@@ -1,0 +1,24 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+
+# 渲染中间文件
+scripts/_tmp/
+
+# 出图产物
+covers/
+_preview/
+*.png
+!docs/*.png
+
+# 用户自己的模板库（跟着各自项目走，不进仓库）
+cover-templates/
+
+# 编辑器 / 系统
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
